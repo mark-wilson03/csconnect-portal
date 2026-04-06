@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> CS Connect Portal </title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+        <link rel="shortcut icon" href="images/ccs_logo.png">
+        <link rel="stylesheet" href="MainStyle.css">
+    </head>
+
+    <body>
+        <h1> Learn More </h1>
+
+        <p>
+
+            Don Mariano Marcos Memorial State University - South La Union Campus <br>
+Bachelor of Science In Computer Science
+
+
+
+Web-based Student Information and Community Service Management System for DMMMSU-SLUC Computer Science Students
+
+
+
+
+A Partial Fulfillment of the Requirement for the Course of <br>
+CSPC 105 Information Management
+
+
+
+Submitted by: <br> <br>
+Project Leader: <br>
+Allado, Mark Wilson Q.<br>
+<br>
+Members:<br>
+Acosta, Lhe Anne D.<br>
+Bayola, Lance Henry R.<br>
+Candana, Ivan Louie F.<br>
+Luares, Maurisse Nicole E.<br>
+Marcella, Bernard<br>
+Ollero, Melgar P.<br>
+Padin, John Mark P.<br>
+Picar, Jasmin J.<br>
+Puzon, John Angelo T.<br>
+Tovillo, Thoby Leone R.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+Chapter I: Introduction <br>
+1.1 Background of the Study <br>
+In the digital age, Higher Education Institutions (HEIs) in the Philippines are increasingly pressured to modernize their administrative workflows. At the Don Mariano Marcos Memorial State University - South La Union Campus (DMMMSU-SLUC), the Computer Science department serves as a pioneer in technological adoption. However, a significant gap remains in the management of student community service records. Currently, the documentation of "outreach" or "extension" hours is often handled through manual logbooks or fragmented spreadsheet files.
+This manual approach is prone to "Information Asymmetry," where students, SBO officers, and faculty members have differing records of rendered service. The CSConnect Portal is proposed as a centralized, web-based solution designed to harmonize student information management with community service tracking, ensuring that every hour rendered is validated, stored, and reportable.
+<br>
+1.2 Statement of the Problem <br>
+The existing manual system for tracking community service at DMMMSU-SLUC faces several critical challenges:
+Data Redundancy: Repeated entry of student details across multiple event forms.
+Verification Delays: The time-lag between a student completing a service and the teacher/administrator verifying those hours.
+Lack of Accessibility: Students cannot check their total accumulated service hours in real-time, leading to confusion regarding graduation requirements.
+<br>
+1.3 Objectives of the Study<br>
+The primary goal is to develop the CSConnect Portal to achieve:
+Centralization: To integrate student profiles and community service histories into a single, secure MySQL database.
+Real-time Monitoring: To allow SBO officers to encode attendance digitally and for teachers to approve them instantly.
+Automated Reporting: To generate professional PDF or CSV reports for departmental and institutional audits.
+
+
+<br>
+Chapter II: Review of Related Literature and Sources <br>
+1.1 Management Information Systems (MIS) in Education
+According to Laudon & Laudon (2022), MIS provides the backbone for "Managing the Digital Firm." In an academic context, an MIS reduces "information silos" by ensuring that data from one department (like the SBO) is immediately available to another (the Faculty). This project applies these principles by creating a "Single Source of Truth" for student extension data.
+1.2 Web-Based Tracking and User Acceptance
+The Technology Acceptance Model (TAM), first proposed by Davis (1989), suggests that the success of a system depends on "Perceived Usefulness." Al-Mamary et al. (2014) further validated that web-based systems in organizations significantly enhance decision-making quality. For CSConnect, the usefulness is defined by the student's ability to see their progress toward service milestones.
+1.3 Data Integrity and Relational Databases
+The use of MySQL is supported by the work of Silberschatz, Korth, and Sudarshan (2019) in Database System Concepts. They argue that ACID (Atomicity, Consistency, Isolation, Durability) compliance is non-negotiable for academic records to prevent data corruption during simultaneous user logins.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter III: Methodology
+1.1 The Agile Development Model
+The study adopts the Agile SDLC. Unlike the traditional Waterfall method, Agile allows the developer to build the system in "Sprints."
+Planning: Defining the requirements of DMMMSU-SLUC students and faculty.
+Sprint 1 (Backend): Setting up the Node.js environment and MySQL schema.
+Sprint 2 (Frontend): Developing the dashboard using HTML/CSS/JS.
+Testing: Using "Unit Testing" for login modules and "User Acceptance Testing" (UAT) with SBO officers.
+1.2 Technical Stack Specifications
+Frontend: HTML5 for structure, CSS3 for the DMMMSU-themed styling, and Vanilla JavaScript for DOM manipulation.
+Backend: Node.js with Express.js. This choice was made because Node.js handles asynchronous operations efficiently, which is ideal for real-time attendance tracking.
+Database: MySQL hosted on a local or cloud server to manage relational data efficiently.
+1.3 User Roles and Access Control
+Role	Permissions
+Students	View personal profiles, track earned service hours, and browse upcoming community projects.
+Teachers	High-level administration, approving service hours, and generating departmental reports.
+SBO Officers	System administration, encoding event details, and initial verification of student attendance.
+
+
+
+
+
+
+
+
+IV. System Architecture
+The CSConnect Portal follows a Client-Server Model. The client (browser) sends requests to the Node.js server, which interacts with the MySQL database to fetch or update records. This architecture ensures that sensitive student data is processed on the server side, minimizing security vulnerabilities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter IV: System Architecture and Design
+1.1 Functional Decomposition
+The system is divided into three primary modules based on user roles:
+Student Module: Profile viewing, service history log, and "Current Progress" tracker.
+SBO Officer Module: Event creation, QR or manual attendance encoding, and preliminary log submission.
+Teacher/Admin Module: Final verification/approval of logs, user management (adding/removing students), and high-level report generation.
+1.2 Security Protocol
+To ensure compliance with the Philippine Data Privacy Act of 2012 (RA 10173), the system implements:
+Bcrypt Hashing: No plain-text passwords will be stored in the database.
+Session-based Authentication: Using Express-session to maintain secure user states.
+
+
+
+
+
+
+
+
+
+
+
+
+V. Literature Review & Reliable Sources
+To ground this research in established theory, the following areas and sources are recommended:
+
+Management Information Systems (MIS): According to Laudon & Laudon (2022) in Management Information Systems: Managing the Digital Firm, centralized systems reduce "information silos" and improve organizational decision-making.
+
+Web-Based Tracking: Research by Al-Mamary et al. (2014) highlights that the "perceived usefulness" of web-based systems significantly enhances student engagement in institutional activities.
+
+Data Integrity in Higher Ed: The use of relational databases (MySQL) is critical for maintaining data normalization in student records, as outlined in Database System Concepts by Silberschatz, Korth, and Sudarshan.
+Al-Mamary, Y. H., Shamsuddin, A., & Aziati, N. (2014). The Role of Management Information Systems in Enhancing Decisions Quality in Organisations. Applied Mechanics and Materials, 497, 767–771.
+Davis, F. D. (1989). Perceived Usefulness, Perceived Ease of Use, and User Acceptance of Information Technology. MIS Quarterly, 13(3), 319–340.
+Laudon, K. C., & Laudon, J. P. (2022). Management Information Systems: Managing the Digital Firm (17th ed.). Pearson Education.
+Republic of the Philippines. (2012). Republic Act No. 10173: Data Privacy Act of 2012. Official Gazette.
+Silberschatz, A., Korth, H. F., & Sudarshan, S. (2019). Database System Concepts (7th ed.). McGraw-Hill Education.
+Sommerville, I. (2016). Software Engineering (10th ed.). Pearson.
+
+
+
+
+
+
+
+
+
+
+
+
+
+VI. Conclusion
+The development of the CSConnect Portal represents a significant step toward the digitalization of student services at DMMMSU-SLUC. By providing a dedicated platform for the Computer Science department, the institution can ensure that student contributions to the community are accurately recorded, valued, and utilized for institutional growth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This research paper framework is designed to align with the academic standards of Don Mariano Marcos Memorial State University (DMMMSU). It frames Pythons CSConnect not just as a database, but as a strategic tool for institutional extension goals.
+
+
+CSConnect Portal: A Web-Based Student Information and Community Service Management System for DMMMSU-SLUC Computer Science Students
+
+Chapter I: Introduction
+
+Background of the Study
+In the digital era, Higher Education Institutions (HEIs) are increasingly mandated to integrate community extension programs into their curricula. At the Don Mariano Marcos Memorial State University - South La Union Campus (DMMMSU-SLUC), the Computer Science department plays a pivotal role in these initiatives. However, the management of student involvement—ranging from attendance at outreach programs to the evaluation of service impact—often remains manual or fragmented across multiple spreadsheets and paper logs.
+
+CSConnect Portal is proposed as a specialized solution. The "Python" branding reflects the technical identity of the discipline, while "CSConnect" signifies the bridge between academic theory and social responsibility. This system seeks to digitize the "service footprint" of every Computer Science student.
+
+Statement of the Problem
+The current manual recording system at DMMMSU-SLUC faces several challenges:
+Data Redundancy: Multiple offices maintaining separate student records.
+
+Verification Difficulty: Difficulty in validating the actual hours rendered by students in various barangays or organizations.
+
+Reporting Delays: Significant time required to compile data for accreditation and institutional year-end reports.
+
+
+
+Objectives of the Study
+
+To centralize student profiles, records, and community service activities into a single, secure information system.
+
+To monitor, document, and evaluate student participation in community service programs efficiently.
+
+To support institutional and community engagement goals by generating accurate reports on student service involvement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter II: Methodology
+
+Software Development Life Cycle (SDLC)
+The researchers will utilize the Agile Development Model. Given the dynamic nature of community service requirements, an iterative approach allows for continuous feedback from the DMMMSU-SLUC extension office and the student body.
+
+
+
+Technical Specifications
+
+Frontend: HTML5, CSS, and JavaScript for a responsive user interface.
+Backend: Node.js and Express.js
+Database: MySQL for handling relational data between students, events, and community partners.
+
+
+
+
+
+Chapter III: System Architecture and Features
+
+System Architecture
+The system follows a Model-View-Controller (MVC) architecture, ensuring that the data management logic is separated from the user interface. This allows for easier maintenance and future updates by subsequent batches of CS students.
+
+
+Core Modules
+1.
+Student Identity Module: A digital profile containing the student’s technical skills, current year level, and total community service hours earned.
+2.
+3.
+Service Tracking Module: A portal where students can "check-in" to community events, upload geo-tagged photos as proof of service, and submit reflection papers.
+4.
+5.
+Community Partner Portal: A restricted access point for community leaders (e.g., Barangay officials) to verify student attendance and rate their performance.
+6.
+7.
+Admin Analytics Dashboard: A high-level view for DMMMSU-SLUC administrators to see real-time statistics on which community programs are most active.
+8.
+
+Chapter IV: Expected Results and Discussion
+Efficiency in Reporting
+By automating data collection, Pythons CSConnect is expected to reduce the administrative workload by approximately 60-70%. Reports required for CHED accreditation or university rankings can be generated instantaneously, ensuring that DMMMSU-SLUC’s community impact is accurately represented.
+Security and Data Privacy
+In compliance with the Data Privacy Act of 2012 (RA 10173), the system will implement end-to-end encryption for student records and multi-factor authentication for administrative accounts, ensuring that sensitive student information remains protected.
+
+Chapter V: Conclusion and Recommendations
+Conclusion
+Pythons CSConnect serves as a vital technological intervention for DMMMSU-SLUC. It transforms community service from a mere graduation requirement into a documented professional portfolio. By centralizing records and streamlining evaluation, the system fosters a culture of accountability and pride among Computer Science students.
+Recommendations
+
+Mobile Integration: Future iterations should include a dedicated mobile app for offline logging in remote areas with poor internet connectivity.
+
+
+Inter-departmental Expansion: While designed for CS students, the framework can be scaled to include other colleges within the university.
+
+
+Would you like me to draft a sample Database Schema (tables and relationships) for this system to include in your Technical Specifications?
+
+        </p>
+    </body>
+</html>

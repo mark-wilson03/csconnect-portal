@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Administrator | CS Connect Portal </title>
+        <link rel="shortcut icon" href="images/ccs_logo.png">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+        <link rel="stylesheet" href="Style.css">
+    </head>
+
+    <body>
+        <!-- HTML CODES -->
+        <header>
+            <div class="logo" title="University Management System">
+                <img src="images/ccs_logo.png" alt="">
+                <h2> <span class="danger"> CS</span>Connect Portal </h2>
+            </div>
+
+            <div class="navbar">
+                <a href="AdministratorDashboard.html" class="active">
+                    <span class="material-icons-sharp"> home </span>
+                    <h3> Home </h3>
+                </a>
+                <a href="StudentSection.html">
+                    <span class="material-icons-sharp"> miscellaneous_services </span>
+                    <h3> Students </h3>
+                </a>
+                <a href="AdministratorSection.html">
+                    <span class="material-icons-sharp"> miscellaneous_services </span>
+                    <h3> Administrators </h3>
+                </a>
+                <a href="AdminPassword.html">
+                    <span class="material-icons-sharp"> key </span>
+                    <h3> Change Password </h3>
+                </a>
+                <a href="Main.html">
+                    <span class="material-icons-sharp" onclick=""> logout </span>
+                    <h3> Logout </h3>
+                </a>
+            </div>
+
+            <div id="profile-btn">
+                <span class="material-icons-sharp"> person </span>
+            </div>
+
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active"> light_mode </span>
+                <span class="material-icons-sharp"> dark_mode </span>
+            </div>
+        </header>
+
+        <div class="container">
+            <aside>
+                <div class="profile">
+                    <div class="top">
+                        <div class="profile-photo">
+                            <img src="images/administrator_profile.png" alt="">
+                        </div>
+                        <div class="info">
+                            <p> <b id="admin-name"> </b> </p>
+                            <small class="text-muted" id="id-number"> </small>
+                        </div>
+                    </div>
+
+                    <div class="about">
+                        <h5> Position </h5>
+                        <p> Administrator </p>
+
+                        <h5> Email Address </h5>
+                        <p id="email-address"> </p>
+                        
+                        <h5> Contact Number </h5>
+                        <p id="contact-number"> </p>
+                        
+                        <h5> Address </h5>
+                        <p id="address"> </p>
+                    </div>
+                </div>
+            </aside>
+
+            <main>
+                <h1> College of Computer Science </h1>
+
+                <div class="bottom">
+                    <footer>
+                        <h2> Community Service </h2>
+                        <p> Streamline your community impact with our Web-based Student Information and Community Service Management System, 
+                            designed specially for Don Mariano Marcos Memorial State University - South La Union Campus Computer Science Students! <br>
+                            This Centralized platform securely stores student profiles, tracks service hours, and generates reports to support institutional
+                            goals, empowering students to make a difference efficiently and effectively. </p>
+                    </footer>
+                </div>
+
+                <h1> Total Number of Students </h1>
+                <div class="subjects">
+
+                    <div class="eg">
+                        <span class="material-icons-sharp"> computer </span>
+                        <h3> Total </h3>
+                        <h2 id="total-stats"> 0/0 </h2>
+                        <div class="progress">
+                            <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                            <div class="number"><p id="total-percent"> 0% </p></div>
+                        </div>
+                    </div>
+
+                    <div class="mth">
+                        <span class="material-icons-sharp"> computer </span>
+                        <h3> First Year </h3>
+                        <h2 id="year1-stats"> 0/0 </h2>
+                        <div class="progress">
+                            <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                            <div class="number"><p id="year1-percent"> 0% </p></div>
+                        </div>
+                        <small class="text-muted"> Second Semester </small>
+                    </div>
+
+                    <div class="cs">
+                        <span class="material-icons-sharp"> computer </span>
+                        <h3> Second Year </h3>
+                        <h2 id="year2-stats"> 0/0 </h2>
+                        <div class="progress">
+                            <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                            <div class="number"><p id="year2-percent"> 0% </p></div>
+                        </div>
+                        <small class="text-muted"> Second Semester </small>
+                    </div>
+
+                    <div class="cg">
+                        <span class="material-icons-sharp"> computer </span>
+                        <h3> Third Year </h3>
+                        <h2 id="year3-stats"> 0/0 </h2>
+                        <div class="progress">
+                            <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                            <div class="number"><p id="year3-percent"> 0% </p></div>
+                        </div>
+                        <small class="text-muted"> Second Semester </small>
+                    </div>
+
+                    <div class="net">
+                        <span class="material-icons-sharp"> computer </span>
+                        <h3> Fourth Year </h3>
+                        <h2 id="year4-stats"> 0/0 </h2>
+                        <div class="progress">
+                            <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                            <div class="number"><p id="year4-percent"> 0% </p></div>
+                        </div>
+                        <small class="text-muted"> Second Semester </small>
+                    </div>
+                </div>
+            </main>
+
+            <div class="right">
+                <div class="announcements">
+                    <h2> Announcements </h2>
+                    <div class="updates">
+                        <div class="message">
+                            <p> <b> CCS </b> Connect managers portal for students. </p>
+                            <small class="text-muted"> 2 Minutes Ago </small>
+                        </div>
+                        <div class="message">
+                            <p> <b> Student-led Portal </b> Tech outreach for CCS students. </p>
+                            <small class="text-muted"> 10 Minutes Ago </small>
+                        </div>
+                        <div class="message">
+                            <p> <b> Join CCS </b> managed by fellow students. </p>
+                            <small class="text-muted"> Yesterday </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users">
+                    <h2> CSConnect Portal Users </h2>
+                    <div class="user">
+                        <div class="profile-photo"><img src="images/administrator_profile.png" alt=""></div>
+                        <div class="info">
+                            <h3> Student Body Organization </h3>
+                            <small class="text-muted"> Administrator </small>
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <div class="profile-photo"><img src="images/administrator_profile.png" alt=""></div>
+                        <div class="info">
+                            <h3> Faculty </h3>
+                            <small class="text-muted"> Administrator </small>
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <div class="profile-photo"><img src="images/student_profile.png" alt=""></div>
+                        <div class="info">
+                            <h3> Student </h3>
+                            <small class="text-muted"> Viewer </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- HTML CODES -->
+
+        <!-- SCRIPT CODES -->
+        <script src="Script.js"> </script>
+
+        <script>
+            
+            document.addEventListener('DOMContentLoaded', () => {
+
+                const sideMenu = document.querySelector("aside");
+                const profileBtn = document.querySelector("#profile-btn");
+                const themeToggler = document.querySelector(".theme-toggler");
+
+                // Profile toggle (only if exists)
+                if(profileBtn){
+                    profileBtn.onclick = function() {
+                        sideMenu.classList.toggle('active');
+                    }
+                }
+
+                // Scroll event
+                window.onscroll = () => {
+                    if(sideMenu){
+                        sideMenu.classList.remove('active');
+                    }
+
+                    if(window.scrollY > 0){
+                        document.querySelector('header').classList.add('active');
+                    }else{
+                        document.querySelector('header').classList.remove('active');
+                    }
+                }
+
+                // Load saved theme
+                const applySavedTheme = () => {
+                    const isDark = localStorage.getItem('dark-theme') === 'true';
+
+                    if (isDark) {
+                        document.body.classList.add('dark-theme');
+                        themeToggler.querySelector('span:nth-child(1)').classList.add('active');
+                        themeToggler.querySelector('span:nth-child(2)').classList.remove('active');
+                    } else {
+                        document.body.classList.remove('dark-theme');
+                        themeToggler.querySelector('span:nth-child(1)').classList.remove('active');
+                        themeToggler.querySelector('span:nth-child(2)').classList.add('active');
+                    }
+                }
+                applySavedTheme();
+
+                // Toggle theme
+                themeToggler.onclick = () => {
+                    document.body.classList.toggle('dark-theme');
+
+                    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
+                    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
+
+                    localStorage.setItem('dark-theme', document.body.classList.contains('dark-theme'));
+                }
+            });
+            
+
+            async function loadDashboardStats() {
+                try {
+                    const response = await fetch('/api/student-counts');
+                    const data = await response.json();
+
+                    // Total circumference for r=36 is ~226
+                    const MAX_CIRCUMFERENCE = 226;
+
+                    const updateCard = (cardSelector, completed, total) => {
+                        const card = document.querySelector(cardSelector);
+                        if (!card) return;
+
+                        const countText = card.querySelector('h2');
+                        const percentText = card.querySelector('.number p');
+                        const circle = card.querySelector('svg circle');
+
+                        // 1. Update Text (Fraction)
+                        countText.innerText = `${completed}/${total}`;
+
+                        // 2. Calculate Percentage
+                        const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+                        percentText.innerText = `${percentage}%`;
+
+                        // 3. Update Circle Animation
+                        // Formula: Offset = Max - (Max * percentage / 100)
+                        const offset = MAX_CIRCUMFERENCE - (MAX_CIRCUMFERENCE * percentage / 100);
+                        circle.style.strokeDashoffset = offset;
+                    };
+
+                    // Match these selectors to your HTML classes
+                    updateCard('.eg', data.completed_all, data.total_all); // Total
+                    updateCard('.mth', data.completed_y1, data.total_y1);  // 1st Year
+                    updateCard('.cs', data.completed_y2, data.total_y2);   // 2nd Year
+                    updateCard('.cg', data.completed_y3, data.total_y3);   // 3rd Year
+                    updateCard('.net', data.completed_y4, data.total_y4);  // 4th Year
+
+                } catch (error) {
+                    console.error("Failed to load stats:", error);
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', loadDashboardStats);
+
+
+            document.addEventListener('DOMContentLoaded', () => {
+                loadDashboardStats();
+                const userData = JSON.parse(localStorage.getItem('user'));
+                
+                if (userData) {
+                    // Example: If you have an element with id="admin-name"
+                    document.getElementById('admin-name').innerText = `Welcome, ${userData.FirstName}`;
+                } else {
+                    // If someone tries to access dashboard without logging in, kick them out
+                    window.location.href = "/";
+                }
+            });
+
+            const user = JSON.parse(localStorage.getItem("user"));
+
+            if (user) {
+                document.getElementById("admin-name").textContent =
+                    user.Firstname + " " + user.MiddleName + " " + user.Lastname;
+
+                document.getElementById("id-number").textContent = `ID Number: ${user.IDNumber}`;
+                document.getElementById("email-address").textContent = user.EmailAddress;
+                document.getElementById("contact-number").textContent = user.ContactNumber;
+                document.getElementById("address").textContent = user.Address;
+            } else {
+                // If no user, redirect to login
+                window.location.href = "Main.html";
+            }
+
+            function logout() {
+                localStorage.removeItem("user");
+                localStorage.removeItem("role");
+                window.location.href = "Main.html";
+            }
+        </script>
+        <!-- SCRIPT CODES -->
+        
+    </body>
+</html>
